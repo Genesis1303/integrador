@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    background-color: #fff; /* Color de fondo blanco para el header */
+    border-bottom: 1px solid #eee; /* Línea divisoria para el header */
+}
+.header-link {
+    color: #333; /* Color deseado para el texto en el header */
+    text-decoration: none; /* Quita el subrayado si no lo deseas */
+}
+
+.header-link:hover {
+    color: #0066CC; /* Color al pasar el ratón */
+}
+/* Estilo para el navbar */
+.navbar {
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
+    padding: 0; /* Elimina el padding para ajustar el ancho del navbar */
+}
+
+/* Estilo para el contenedor del navbar */
+.container-fluid {
+    padding: 0; /* Elimina el padding del contenedor para asegurar que ocupe toda la anchura */
+}
+
+/* Logo en el header */
+.navbar-brand img {
+    max-height: 50px; /* Ajusta el tamaño máximo del logo */
+}
+
+/* Enlaces de navegación */
+.navbar-nav .nav-item {
+    margin: 0 10px; /* Espacio horizontal entre los elementos del menú */
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #333;
+    padding: 8px 15px; /* Padding para mejorar la área de clic */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0066CC;
+}
+
+/* Botones primarios */
+.btn-primary {
+    background-color: #0066CC;
+    border: none;
+    margin-right: 10px; /* Espacio a la derecha de los botones */
+}
+
+.btn-primary:hover {
+    background-color: #004999;
+}
+
+/* Botones secundarios */
+.btn-outline-primary {
+    border-color: #0066CC;
+    color: #0066CC;
+    margin-right: 10px; /* Espacio a la derecha del botón */
+}
+
+.btn-outline-primary:hover {
+    background-color: #0066CC;
+    color: #fff;
+}
+
+/* Icono del carrito */
+.fas.fa-shopping-cart {
+    margin-right: 5px;
+}
+/* Estilo para la sección hero */
+.hero {
+    background-image: url('../images/banner.jpg'); /* Ruta a tu imagen de banner */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff; /* Color del texto blanco para contraste */
+    position: relative; /* Necesario para el overlay */
+    padding: 100px 0; /* Ajusta el padding superior e inferior según sea necesario */
+    z-index: 1; /* Asegura que el contenido esté por encima del overlay */
+}
+
+/* Estilo para el overlay de la imagen para asegurar legibilidad del texto */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay negro semi-transparente */
+    z-index: 1; /* Asegura que el overlay esté por encima de la imagen */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+}
+
+/* Opcional: Ajusta el estilo del texto si es necesario */
+.hero h1,
+.hero p {
+    color: #fff; /* Color del texto blanco para contraste */
+}
+
+footer {
+    background-color: #0066CC; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco para contraste */
+    padding: 20px 0; /* Padding vertical para espacio interno */
+    width: 100%; /* Asegura que el footer ocupe toda la anchura */
+}
+
+/* Estilo para los enlaces en el footer */
+footer a {
+    color: #ffffff; /* Color de los enlaces blanco */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #d0e0ff; /* Color de los enlaces al pasar el mouse */
+}
+
+/* Estilo para los iconos de redes sociales */
+.social-icons a {
+    font-size: 24px;
+    color: #ffffff; /* Color de los iconos blanco */
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+.social-icons a:hover {
+    color: #d0e0ff; /* Color de los iconos al pasar el mouse */
+}
+.contact img {
+    max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Asegura que el texto en la sección de contacto se alinee a la izquierda en pantallas grandes */
+@media (min-width: 768px) {
+    .contact .text-md-start {
+        text-align: left;
+    }
+}
+.card-img-top {
+    height: 400px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+/* Asegura que las tarjetas tengan el mismo tamaño */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya uniformemente */
+    height: 100%; /* Asegura que la tarjeta ocupe todo el alto del contenedor */
+}
